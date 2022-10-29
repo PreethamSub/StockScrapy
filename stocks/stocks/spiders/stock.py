@@ -7,8 +7,9 @@ class QuotesSpider(scrapy.Spider):
     
     def start_requests(self):
       urls = []
-      data = pd.read_csv('/content/drive/MyDrive/Scrapy proj/stocks/stocks/spiders/EQUITY_L.csv')
+      data = pd.read_csv('EQUITY_L.csv')
       #df = data.head(1826)
+      #for testing purposes using 3 values of 1826
       df = data.head(3)
       codes = df['SYMBOL'].tolist()
       for code in codes:
